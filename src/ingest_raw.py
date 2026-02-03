@@ -34,15 +34,26 @@ ensure_audit_table(engine, AUDIT_TABLE)
 # -------------------
 for fname in sorted(os.listdir(RAW_DIR)):
 
-    # 🚫 Ignore RUL files
+    fpath = os.path.join(RAW_DIR, fname)
+    
+    # Ingest RUL files
     if fname.startswith("RUL_"):
-        print(f"[SKIP] {fname} (labels, not telemetry)")
+        df = pd.read_csv(fpath, header=None, names=["rul"])
+        df["engine_id"] = df.index + 1
+
+        df.to_sql(
+            "cmapss_rul_raw",
+            engine,
+            if_exists="replace",
+            index=False
+        )
+
+        print(f"[OK] Ingested RUL labels: {fname}")
         continue
 
     if not fname.startswith(("train_", "test_")):
         raise ValueError(f"Unknown file type: {fname}")
 
-    fpath = os.path.join(RAW_DIR, fname)
     fh = file_md5(fpath)
 
     if already_ingested(engine, AUDIT_TABLE, fname, fh):

@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: engine_lifetime
-    description: "Gold layer: analytics-ready table summarizing each engine's lifetime and RUL"
+  - name: engine_telemetry_profile
+    description: "Gold layer: engine-level telemetry profile with lifecycle duration and sensor statistics"
     columns:
       - name: engine_id
         description: "Unique engine identifier"
@@ -157,3 +157,71 @@ models:
         description: "Maximum value of sensor 21"
       - name: avg_sensor_21
         description: "Average value of sensor 21"
+
+  - name: dim_engine
+    description: "Engine dimension table"
+    columns:
+      - name: engine_id
+        tests: [not_null, unique]
+      - name: lifetime_cycles
+        tests: [not_null]
+
+  - name: fact_engine_cycles
+    description: "Fact table with one row per engine per cycle, for analytics consumption"
+    columns:
+      - name: engine_id
+        description: "Unique engine identifier"
+        tests:
+          - not_null
+      - name: cycle
+        description: "Operational cycle number"
+        tests:
+          - not_null
+      - name: op_setting_1
+        description: "Operational setting 1"
+      - name: op_setting_2
+        description: "Operational setting 2"
+      - name: op_setting_3
+        description: "Operational setting 3"
+      - name: sensor_1
+        description: "Sensor measurement 1"
+      - name: sensor_2
+        description: "Sensor measurement 2"
+      - name: sensor_3
+        description: "Sensor measurement 3"
+      - name: sensor_4
+        description: "Sensor measurement 4"
+      - name: sensor_5
+        description: "Sensor measurement 5"
+      - name: sensor_6
+        description: "Sensor measurement 6"
+      - name: sensor_7
+        description: "Sensor measurement 7"
+      - name: sensor_8
+        description: "Sensor measurement 8"
+      - name: sensor_9
+        description: "Sensor measurement 9"
+      - name: sensor_10
+        description: "Sensor measurement 10"
+      - name: sensor_11
+        description: "Sensor measurement 11"
+      - name: sensor_12
+        description: "Sensor measurement 12"
+      - name: sensor_13
+        description: "Sensor measurement 13"
+      - name: sensor_14
+        description: "Sensor measurement 14"
+      - name: sensor_15
+        description: "Sensor measurement 15"
+      - name: sensor_16
+        description: "Sensor measurement 16"
+      - name: sensor_17
+        description: "Sensor measurement 17"
+      - name: sensor_18
+        description: "Sensor measurement 18"
+      - name: sensor_19
+        description: "Sensor measurement 19"
+      - name: sensor_20
+        description: "Sensor measurement 20"
+      - name: sensor_21
+        description: "Sensor measurement 21"

@@ -1,4 +1,4 @@
--- models/gold/engine_lifetime.sql
+-- models/gold/engine_telemetry_profile.sql
 
 -- Gold layer: analytics-ready table
 
