@@ -1,0 +1,159 @@
+version: 2
+
+models:
+  - name: engine_lifetime
+    description: "Gold layer: analytics-ready table summarizing each engine's lifetime and RUL"
+    columns:
+      - name: engine_id
+        description: "Unique engine identifier"
+        tests:
+          - not_null
+          - unique
+      - name: max_cycle
+        description: "Maximum cycle observed for this engine"
+        tests:
+          - not_null
+      - name: min_op_setting_1
+        description: "Minimum value of operational setting 1"
+      - name: max_op_setting_1
+        description: "Maximum value of operational setting 1"
+      - name: avg_op_setting_1
+        description: "Average value of operational setting 1"
+      - name: min_op_setting_2
+        description: "Minimum value of operational setting 2"
+      - name: max_op_setting_2
+        description: "Maximum value of operational setting 2"
+      - name: avg_op_setting_2
+        description: "Average value of operational setting 2"
+      - name: min_op_setting_3
+        description: "Minimum value of operational setting 3"
+      - name: max_op_setting_3
+        description: "Maximum value of operational setting 3"
+      - name: avg_op_setting_3
+        description: "Average value of operational setting 3"
+      - name: min_sensor_1
+        description: "Minimum value of sensor 1"
+      - name: max_sensor_1
+        description: "Maximum value of sensor 1"
+      - name: avg_sensor_1
+        description: "Average value of sensor 1"
+      - name: min_sensor_2
+        description: "Minimum value of sensor 2"
+      - name: max_sensor_2
+        description: "Maximum value of sensor 2"
+      - name: avg_sensor_2
+        description: "Average value of sensor 2"
+      - name: min_sensor_3
+        description: "Minimum value of sensor 3"
+      - name: max_sensor_3
+        description: "Maximum value of sensor 3"
+      - name: avg_sensor_3
+        description: "Average value of sensor 3"
+      - name: min_sensor_4
+        description: "Minimum value of sensor 4"
+      - name: max_sensor_4
+        description: "Maximum value of sensor 4"
+      - name: avg_sensor_4
+        description: "Average value of sensor 4"
+      - name: min_sensor_5
+        description: "Minimum value of sensor 5"
+      - name: max_sensor_5
+        description: "Maximum value of sensor 5"
+      - name: avg_sensor_5
+        description: "Average value of sensor 5"
+      - name: min_sensor_6
+        description: "Minimum value of sensor 6"
+      - name: max_sensor_6
+        description: "Maximum value of sensor 6"
+      - name: avg_sensor_6
+        description: "Average value of sensor 6"
+      - name: min_sensor_7
+        description: "Minimum value of sensor 7"
+      - name: max_sensor_7
+        description: "Maximum value of sensor 7"
+      - name: avg_sensor_7
+        description: "Average value of sensor 7"
+      - name: min_sensor_8
+        description: "Minimum value of sensor 8"
+      - name: max_sensor_8
+        description: "Maximum value of sensor 8"
+      - name: avg_sensor_8
+        description: "Average value of sensor 8"
+      - name: min_sensor_9
+        description: "Minimum value of sensor 9"
+      - name: max_sensor_9
+        description: "Maximum value of sensor 9"
+      - name: avg_sensor_9
+        description: "Average value of sensor 9"
+      - name: min_sensor_10
+        description: "Minimum value of sensor 10"
+      - name: max_sensor_10
+        description: "Maximum value of sensor 10"
+      - name: avg_sensor_10
+        description: "Average value of sensor 10"
+      - name: min_sensor_11
+        description: "Minimum value of sensor 1"
+      - name: max_sensor_11
+        description: "Maximum value of sensor 11"
+      - name: avg_sensor_11
+        description: "Average value of sensor 11"
+      - name: min_sensor_12
+        description: "Minimum value of sensor 12"
+      - name: max_sensor_12
+        description: "Maximum value of sensor 12"
+      - name: avg_sensor_12
+        description: "Average value of sensor 12"
+      - name: min_sensor_13
+        description: "Minimum value of sensor 13"
+      - name: max_sensor_13
+        description: "Maximum value of sensor 13"
+      - name: avg_sensor_13
+        description: "Average value of sensor 13"
+      - name: min_sensor_14
+        description: "Minimum value of sensor 14"
+      - name: max_sensor_14
+        description: "Maximum value of sensor 14"
+      - name: avg_sensor_14
+        description: "Average value of sensor 14"
+      - name: min_sensor_15
+        description: "Minimum value of sensor 15"
+      - name: max_sensor_15
+        description: "Maximum value of sensor 15"
+      - name: avg_sensor_15
+        description: "Average value of sensor 15"
+      - name: min_sensor_16
+        description: "Minimum value of sensor 16"
+      - name: max_sensor_16
+        description: "Maximum value of sensor 16"
+      - name: avg_sensor_16
+        description: "Average value of sensor 16"
+      - name: min_sensor_17
+        description: "Minimum value of sensor 17"
+      - name: max_sensor_17
+        description: "Maximum value of sensor 17"
+      - name: avg_sensor_17
+        description: "Average value of sensor 17"
+      - name: min_sensor_18
+        description: "Minimum value of sensor 18"
+      - name: max_sensor_18
+        description: "Maximum value of sensor 18"
+      - name: avg_sensor_18
+        description: "Average value of sensor 18"
+      - name: min_sensor_19
+        description: "Minimum value of sensor 19"
+      - name: max_sensor_19
+        description: "Maximum value of sensor 19"
+      - name: avg_sensor_19
+        description: "Average value of sensor 19"
+      - name: min_sensor_20
+        description: "Minimum value of sensor 20"
+      - name: max_sensor_20
+        description: "Maximum value of sensor 20"
+      - name: avg_sensor_20
+        description: "Average value of sensor 20"
+      - name: min_sensor_21
+        description: "Minimum value of sensor 21"
+      - name: max_sensor_21
+        description: "Maximum value of sensor 21"
+      - name: avg_sensor_21
+        description: "Average value of sensor 21"

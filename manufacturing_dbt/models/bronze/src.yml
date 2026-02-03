@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: public          # source name used in {{ source() }}
+    schema: public        # actual Postgres schema
+    tables:
+      - name: cmapss_raw
+        description: "Raw CMAPSS telemetry ingested from NASA files"
